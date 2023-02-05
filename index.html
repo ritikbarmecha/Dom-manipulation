@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>demo</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+      </head>
+<body style="background-color:skyblue;">
+
+
+<div class="container m-4">
+    <button  id="btm"  class=" btn btn-primary" >
+        Add
+        </button>
+        
+        <button  id="btx" class=" btn btn-primary" >
+            Remove
+            </button>
+        </br>
+        <div class="card">
+            <ol>
+                <a name="list" data="valid">List of Items</a>
+            </ol>
+       
+
+   
+
+<!-- 
+    
+    <ul id="access">
+        <li class="list1" > Heaphones</li>
+        <li class="list1"> bags</li>
+        <li class="list1" >Heaphones2</li>
+    </ul> -->
+   
+    <!-- <script>
+
+
+    </script>
+    <div id="Alldivs2" class="h1">
+ 
+<span  data-title="hellow"  data-long="22"  > span</span>
+  
+<span  data-title="hellow"  data-long="22" style="display:none" > welcome</span>
+</div>
+    <table>
+
+        <tr>
+ <td>row1</td>
+<td>row1.1</td>
+        </tr>
+        <tr>
+            <td>row2</td>
+            <td>row2.1</td>
+        </tr>
+    </table> -->
+    
+<script>
+// const b=document.querySelector('div');
+let counter=0;
+let ans=document.querySelector('.card');
+function callme(){
+let a=prompt("enter Name");
+counter=counter+1
+let  c=document.createElement('li');
+c.id="list"+counter
+
+console.log(c);
+
+//  c.innerHTML=`<ul>
+//         <li> </li>
+//           </ul>`
+//     c.innerText=a
+c.append(counter+" "+a);
+ans.append(c);
+// document.body.append(c)
+}
+let x=document.querySelector('#btm')
+x.addEventListener('mouseenter',color);
+x.addEventListener('mouseout',color2);
+// x.addEventListener('mouseover',color);
+// body.append(c);
+ x.addEventListener('click',callme);
+// console.log(x);
+// let k=document.getElementById('list1');
+// let k=document.getElementsByClassName('list1');
+// let f=document.querySelectorAll('ul>li:nth-child(3)');
+// // let j=document.getElementsByTagName('ul');
+//     console.log(b.textContent);
+//     console.log(b.innerText);
+//     console.log(f[0].textContent);
+
+    // for(node of document.documentElement.children){
+    //     console.log(node); 
+    // }
+
+    function callbtx(){
+
+ let a=prompt("enter id");
+  let m=document.getElementById("list"+a)
+if(m==null){
+   alert("Id not found")
+}else{
+    console.log(m)
+    m.remove()
+}
+
+   
+}
+    let y=document.querySelector('#btx')
+// body.append(c);
+y.addEventListener('mouseenter',color3);
+y.addEventListener('mouseout',color4);
+ y.addEventListener('click',callbtx);
+ 
+ function color(){
+    x.style.backgroundColor="green";
+ }
+ function color2(){
+x.style.backgroundColor="";
+ }
+ function color3(){
+    y.style.backgroundColor="green";
+ }
+ function color4(){
+y.style.backgroundColor="";
+ }
+
+ 
+ 
+</script>
+</div>
+       
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+</body>
+</html>
+
+    
